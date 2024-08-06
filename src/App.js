@@ -16,7 +16,7 @@ function App() {
   
     return (
     <>
-      <h1>Learn Something</h1>
+      <h1>Leitner Box</h1>
       <ul>
         {cards.map((card) => (
           <Card key={Math.random()} source={card.source} target={card.target} />
