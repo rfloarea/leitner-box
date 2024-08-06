@@ -1,5 +1,6 @@
 import React from "react";
-import Card from "./components/Card";
+import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
 
 
 function App() {
@@ -16,10 +17,13 @@ function App() {
   
     return (
     <>
-      <h1>Leitner Box</h1>
+      <Header />
       <ul>
         {cards.map((card) => (
-          <Card key={Math.random()} source={card.source} target={card.target} />
+          <Card 
+            key={Math.random()} 
+            source={card.source} 
+            target={card.target} />
         ))}
       </ul>
     </>
