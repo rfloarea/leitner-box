@@ -14,10 +14,11 @@ function App() {
       target: "la revedere",
     },
   ]);
-  
+
     return (
     <>
       <Header />
+      <CreateCard />
       <ul>
         {cards.map((card) => (
           <Card 
@@ -27,6 +28,50 @@ function App() {
         ))}
       </ul>
     </>
+  );
+}
+
+function CreateCard() {
+  const [tentativeCard, setTentativeCard] = React.useState({ source: "", target: "" });
+
+  function handleCreateCard(tentativeCard) {
+    console.log(tentativeCard)
+  }
+
+  function handleUpdateSource(e) {
+    setTentativeCard({
+      ...tentativeCard,
+      source: e.target.value
+    })
+  }
+
+  function handleUpdateTarget(e) {
+    setTentativeCard({
+      ...tentativeCard,
+      target: e.target.value
+    })
+  }
+
+  return (
+    <div>
+      <label htmlFor="source">Source Language</label>
+      <input
+        type="text"
+        id="source"
+        value={tentativeCard.source}
+        onChange={handleUpdateSource}
+      ></input>
+      <label htmlFor="target">Target Language</label>
+      <input
+        type="text"
+        id="target"
+        value={tentativeCard.target}
+        onChange={handleUpdateTarget}
+      ></input>
+      <button
+        onClick={handleCreateCard}
+      >Create Card</button>
+    </div>
   );
 }
 

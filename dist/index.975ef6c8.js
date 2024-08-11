@@ -27228,7 +27228,7 @@ var _header = require("./components/Header/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _card = require("./components/Card/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
-var _s = $RefreshSig$();
+var _s = $RefreshSig$(), _s1 = $RefreshSig$();
 function App() {
     _s();
     const [cards, setCards] = (0, _reactDefault.default).useState([
@@ -27248,18 +27248,23 @@ function App() {
                 lineNumber: 20,
                 columnNumber: 7
             }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CreateCard, {}, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 21,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 children: cards.map((card)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
                         source: card.source,
                         target: card.target
                     }, Math.random(), false, {
                         fileName: "src/App.js",
-                        lineNumber: 23,
+                        lineNumber: 24,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 7
             }, this)
         ]
@@ -27267,9 +27272,88 @@ function App() {
 }
 _s(App, "L2DA5LjMXLG3JsdHhgZr4WaDh7o=");
 _c = App;
+function CreateCard() {
+    _s1();
+    const [tentativeCard, setTentativeCard] = (0, _reactDefault.default).useState({
+        source: "",
+        target: ""
+    });
+    function handleCreateCard() {
+        // does stuff
+        console.log("card created!");
+        console.log(tentativeCard);
+    }
+    function handleUpdateSource(e) {
+        setTentativeCard({
+            ...tentativeCard,
+            source: e.target.value
+        });
+    }
+    function handleUpdateTarget(e) {
+        setTentativeCard({
+            ...tentativeCard,
+            target: e.target.value
+        });
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                htmlFor: "source",
+                children: "Source Language"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 59,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                id: "source",
+                value: tentativeCard.source,
+                onChange: handleUpdateSource
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 60,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                htmlFor: "target",
+                children: "Target Language"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 66,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                id: "target",
+                value: tentativeCard.target,
+                onChange: handleUpdateTarget
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 67,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: handleCreateCard,
+                children: "Create Card"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 73,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.js",
+        lineNumber: 58,
+        columnNumber: 5
+    }, this);
+}
+_s1(CreateCard, "X9e/7fikjGBcuD6gf4MwyE76zcc=");
+_c1 = CreateCard;
 exports.default = App;
-var _c;
+var _c, _c1;
 $RefreshReg$(_c, "App");
+$RefreshReg$(_c1, "CreateCard");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
