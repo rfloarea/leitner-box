@@ -9,3 +9,8 @@ I learned of the Leitner box through an amazing web comic thing created by Nicky
 Also, here's a quick video on how to assemble it using paper: https://www.youtube.com/watch?v=uvF1XuseZFE
 
 So basically, this project is me implementing my own Leitner box in code! Yay!
+
+## TODO
+
+- user generated cards
+- multiple views of cards: list, grid, single
