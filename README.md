@@ -12,5 +12,9 @@ So basically, this project is me implementing my own Leitner box in code! Yay!
 
 ## TODO
 
-- user generated cards
+- decent looking UI
+- data persistance (localStorage? DB? Something else?)
 - multiple views of cards: list, grid, single
+- click to reveal
+- label/sort/assign for spaced repetition (basically the whole Leitner algorithm thing)
+  - Is this automated based on getting the answer correct or not?
