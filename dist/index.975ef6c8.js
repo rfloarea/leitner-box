@@ -27228,7 +27228,9 @@ var _header = require("./components/Header/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _card = require("./components/Card/Card");
 var _cardDefault = parcelHelpers.interopDefault(_card);
-var _s = $RefreshSig$(), _s1 = $RefreshSig$();
+var _createCardForm = require("./components/CreatCardForm/CreateCardForm");
+var _createCardFormDefault = parcelHelpers.interopDefault(_createCardForm);
+var _s = $RefreshSig$();
 function App() {
     _s();
     const [cards, setCards] = (0, _reactDefault.default).useState([
@@ -27252,14 +27254,14 @@ function App() {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 25,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CreateCardForm, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _createCardFormDefault.default), {
                 handleCreateCard: handleCreateCard
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27268,12 +27270,12 @@ function App() {
                         target: card.target
                     }, Math.random(), false, {
                         fileName: "src/App.js",
-                        lineNumber: 29,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this)
         ]
@@ -27281,99 +27283,16 @@ function App() {
 }
 _s(App, "L2DA5LjMXLG3JsdHhgZr4WaDh7o=");
 _c = App;
-function CreateCardForm({ handleCreateCard }) {
-    _s1();
-    const [tentativeCard, setTentativeCard] = (0, _reactDefault.default).useState({
-        source: "",
-        target: ""
-    });
-    function handleSubmit(e) {
-        e.preventDefault();
-        handleCreateCard(tentativeCard);
-        setTentativeCard({
-            source: "",
-            target: ""
-        });
-    }
-    function handleUpdateSource(e) {
-        setTentativeCard({
-            ...tentativeCard,
-            source: e.target.value
-        });
-    }
-    function handleUpdateTarget(e) {
-        setTentativeCard({
-            ...tentativeCard,
-            target: e.target.value
-        });
-    }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-        onSubmit: handleSubmit,
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                htmlFor: "source",
-                children: "Source Language"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 64,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                id: "source",
-                value: tentativeCard.source,
-                onChange: handleUpdateSource
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 65,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                htmlFor: "target",
-                children: "Target Language"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 71,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                type: "text",
-                id: "target",
-                value: tentativeCard.target,
-                onChange: handleUpdateTarget
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 72,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                type: "submit",
-                children: "Create Card"
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 78,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "src/App.js",
-        lineNumber: 63,
-        columnNumber: 5
-    }, this);
-}
-_s1(CreateCardForm, "X9e/7fikjGBcuD6gf4MwyE76zcc=");
-_c1 = CreateCardForm;
 exports.default = App;
-var _c, _c1;
+var _c;
 $RefreshReg$(_c, "App");
-$RefreshReg$(_c1, "CreateCardForm");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Card/Card":"2tZEt","./components/Header/Header":"8iwn3"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Card/Card":"2tZEt","./components/Header/Header":"8iwn3","./components/CreatCardForm/CreateCardForm":"3TF7t"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27616,6 +27535,110 @@ var _c;
 $RefreshReg$(_c, "Header");
 
   $parcel$ReactRefreshHelpers$a077.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3TF7t":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$852d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$852d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
+function CreateCardForm({ handleCreateCard }) {
+    _s();
+    const [tentativeCard, setTentativeCard] = (0, _reactDefault.default).useState({
+        source: "",
+        target: ""
+    });
+    function handleSubmit(e) {
+        e.preventDefault();
+        handleCreateCard(tentativeCard);
+        setTentativeCard({
+            source: "",
+            target: ""
+        });
+    }
+    function handleUpdateSource(e) {
+        setTentativeCard({
+            ...tentativeCard,
+            source: e.target.value
+        });
+    }
+    function handleUpdateTarget(e) {
+        setTentativeCard({
+            ...tentativeCard,
+            target: e.target.value
+        });
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+        onSubmit: handleSubmit,
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                htmlFor: "source",
+                children: "Source Language"
+            }, void 0, false, {
+                fileName: "src/components/CreatCardForm/CreateCardForm.js",
+                lineNumber: 28,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                id: "source",
+                value: tentativeCard.source,
+                onChange: handleUpdateSource
+            }, void 0, false, {
+                fileName: "src/components/CreatCardForm/CreateCardForm.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                htmlFor: "target",
+                children: "Target Language"
+            }, void 0, false, {
+                fileName: "src/components/CreatCardForm/CreateCardForm.js",
+                lineNumber: 35,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                id: "target",
+                value: tentativeCard.target,
+                onChange: handleUpdateTarget
+            }, void 0, false, {
+                fileName: "src/components/CreatCardForm/CreateCardForm.js",
+                lineNumber: 36,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                type: "submit",
+                children: "Create Card"
+            }, void 0, false, {
+                fileName: "src/components/CreatCardForm/CreateCardForm.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/CreatCardForm/CreateCardForm.js",
+        lineNumber: 27,
+        columnNumber: 5
+    }, this);
+}
+_s(CreateCardForm, "X9e/7fikjGBcuD6gf4MwyE76zcc=");
+_c = CreateCardForm;
+exports.default = CreateCardForm;
+var _c;
+$RefreshReg$(_c, "CreateCardForm");
+
+  $parcel$ReactRefreshHelpers$852d.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
