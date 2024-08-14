@@ -14,11 +14,16 @@ function App() {
       target: "la revedere",
     },
   ]);
+  
+  function handleCreateCard(tentativeCard) {
+    const nextCards = [...cards, tentativeCard];
+    setCards(nextCards);
+  };
 
     return (
     <>
       <Header />
-      <CreateCard />
+      <CreateCardForm handleCreateCard={handleCreateCard} />
       <ul>
         {cards.map((card) => (
           <Card 
@@ -31,10 +36,12 @@ function App() {
   );
 }
 
-function CreateCard() {
+function CreateCardForm({ handleCreateCard }) {
   const [tentativeCard, setTentativeCard] = React.useState({ source: "", target: "" });
+  console.log(tentativeCard)
 
-  function handleCreateCard(tentativeCard) {
+  function handleSubmit() {
+    handleCreateCard(tentativeCard)
     console.log(tentativeCard)
   }
 
@@ -69,7 +76,7 @@ function CreateCard() {
         onChange={handleUpdateTarget}
       ></input>
       <button
-        onClick={handleCreateCard}
+        onClick={handleSubmit}
       >Create Card</button>
     </div>
   );

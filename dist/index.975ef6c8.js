@@ -27241,16 +27241,25 @@ function App() {
             target: "la revedere"
         }
     ]);
+    function handleCreateCard(tentativeCard) {
+        const nextCards = [
+            ...cards,
+            tentativeCard
+        ];
+        setCards(nextCards);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 20,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CreateCard, {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CreateCardForm, {
+                handleCreateCard: handleCreateCard
+            }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 21,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -27259,12 +27268,12 @@ function App() {
                         target: card.target
                     }, Math.random(), false, {
                         fileName: "src/App.js",
-                        lineNumber: 24,
+                        lineNumber: 29,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 22,
+                lineNumber: 27,
                 columnNumber: 7
             }, this)
         ]
@@ -27272,15 +27281,15 @@ function App() {
 }
 _s(App, "L2DA5LjMXLG3JsdHhgZr4WaDh7o=");
 _c = App;
-function CreateCard() {
+function CreateCardForm({ handleCreateCard }) {
     _s1();
     const [tentativeCard, setTentativeCard] = (0, _reactDefault.default).useState({
         source: "",
         target: ""
     });
-    function handleCreateCard() {
-        // does stuff
-        console.log("card created!");
+    console.log(tentativeCard);
+    function handleSubmit() {
+        handleCreateCard(tentativeCard);
         console.log(tentativeCard);
     }
     function handleUpdateSource(e) {
@@ -27302,7 +27311,7 @@ function CreateCard() {
                 children: "Source Language"
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 59,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27312,7 +27321,7 @@ function CreateCard() {
                 onChange: handleUpdateSource
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 60,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27320,7 +27329,7 @@ function CreateCard() {
                 children: "Target Language"
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 66,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27330,30 +27339,30 @@ function CreateCard() {
                 onChange: handleUpdateTarget
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 67,
+                lineNumber: 72,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: handleCreateCard,
+                onClick: handleSubmit,
                 children: "Create Card"
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 73,
+                lineNumber: 78,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 58,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 }
-_s1(CreateCard, "X9e/7fikjGBcuD6gf4MwyE76zcc=");
-_c1 = CreateCard;
+_s1(CreateCardForm, "X9e/7fikjGBcuD6gf4MwyE76zcc=");
+_c1 = CreateCardForm;
 exports.default = App;
 var _c, _c1;
 $RefreshReg$(_c, "App");
-$RefreshReg$(_c1, "CreateCard");
+$RefreshReg$(_c1, "CreateCardForm");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
