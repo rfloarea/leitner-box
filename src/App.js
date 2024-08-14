@@ -38,29 +38,29 @@ function App() {
 
 function CreateCardForm({ handleCreateCard }) {
   const [tentativeCard, setTentativeCard] = React.useState({ source: "", target: "" });
-  console.log(tentativeCard)
 
-  function handleSubmit() {
-    handleCreateCard(tentativeCard)
-    console.log(tentativeCard)
-  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    handleCreateCard(tentativeCard);
+    setTentativeCard({ source: "", target: "" });
+  };
 
   function handleUpdateSource(e) {
     setTentativeCard({
       ...tentativeCard,
       source: e.target.value
-    })
-  }
+    });
+  };
 
   function handleUpdateTarget(e) {
     setTentativeCard({
       ...tentativeCard,
       target: e.target.value
-    })
-  }
+    });
+  };
 
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="source">Source Language</label>
       <input
         type="text"
@@ -75,11 +75,11 @@ function CreateCardForm({ handleCreateCard }) {
         value={tentativeCard.target}
         onChange={handleUpdateTarget}
       ></input>
-      <button
-        onClick={handleSubmit}
-      >Create Card</button>
-    </div>
+      <button type="submit">
+        Create Card
+      </button>
+    </form>
   );
-}
+};
 
 export default App;

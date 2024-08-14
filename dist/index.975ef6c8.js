@@ -27287,10 +27287,13 @@ function CreateCardForm({ handleCreateCard }) {
         source: "",
         target: ""
     });
-    console.log(tentativeCard);
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault();
         handleCreateCard(tentativeCard);
-        console.log(tentativeCard);
+        setTentativeCard({
+            source: "",
+            target: ""
+        });
     }
     function handleUpdateSource(e) {
         setTentativeCard({
@@ -27304,7 +27307,8 @@ function CreateCardForm({ handleCreateCard }) {
             target: e.target.value
         });
     }
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+        onSubmit: handleSubmit,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                 htmlFor: "source",
@@ -27343,7 +27347,7 @@ function CreateCardForm({ handleCreateCard }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: handleSubmit,
+                type: "submit",
                 children: "Create Card"
             }, void 0, false, {
                 fileName: "src/App.js",
